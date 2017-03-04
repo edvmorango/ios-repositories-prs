@@ -33,9 +33,6 @@ struct Repository: Decodable{
     
 }
 
-
-
-
 struct Owner : Decodable{
     let name : String
     let photo : String
@@ -47,5 +44,25 @@ struct Owner : Decodable{
     
 }
 
+struct PullRequest: Decodable{
+    let owner: Owner
+    let title : String
+    let date : Date
+    let body : String
+    
+    
+    
+    init?(json: JSON) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-dd-MM'T'HH:mm:ss'Z'"
+        self.owner =  ("user" <~~ json)!
+        self.title =  ("title" <~~ json)!
+        self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json)!
+        self.body =   ("body" <~~ json)!
+
+    }
+    
+
+}
 
 

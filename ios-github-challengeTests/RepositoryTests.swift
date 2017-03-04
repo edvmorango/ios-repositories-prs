@@ -15,7 +15,7 @@ import Gloss
 
 class RepositoryTests : QuickSpec{
 
-    let myMock : JSON = [
+    let repositoryMock : JSON = [
         "id" : 22458259,
         "name" : "Alamofire",
         "description": "Elegant HTTP Networking in Swift",
@@ -27,21 +27,37 @@ class RepositoryTests : QuickSpec{
         ]
     ]
     
+    let prMock: JSON =  [
+
+        "title": "add LICENSE Link",
+        "body": "Part of License is `See LICENCE for details' in README.\r\n\r\nBut It's not uncomfortable and unkind\r\n\r\nI added LICENSE link.",
+        "created_at": "2017-03-01T16:30:15Z",
+        "user": [
+            "login": "helloyako",
+            "avatar_url": "https://avatars1.githubusercontent.com/u/5343804?v=3",
+        ]
+        
+    ]
+  
     override func spec(){
 
-        describe("entitys"){
+        describe("entities"){
             
         it("owner is decodable"){
-            let owner  = Owner(json: self.myMock["owner"] as! JSON)
-                expect(owner?.name).to(equal("Alamofire"))
-            }
-            it("repository is decodable"){
-                let repository = Repository(json: self.myMock)
-                
+            let rOwner  = Owner(json: self.repositoryMock["owner"] as! JSON)
+            let pOwner =  Owner(json: self.prMock["user"] as! JSON)
+            expect(rOwner?.name).to(equal("Alamofire"))
+            expect(pOwner?.name).to(equal("helloyako"))
+        }
+        it("repository is decodable"){
+                let repository = Repository(json: self.repositoryMock)
                 expect(repository?.id).to(equal(22458259))
-                
+        }
+            it("pr is decodable"){
+                let pr = PullRequest(json: self.prMock)
+                expect(pr?.title).to(equal("add LICENSE Link"))
             }
-        
+            
         }
         
     
