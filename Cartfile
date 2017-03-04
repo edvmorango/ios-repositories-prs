@@ -1,6 +1,6 @@
 github "Quick/Quick"
 github "Quick/Nimble"
-github "thoughtbot/Argo"
 github "ReactiveX/RxSwift"
 github "Alamofire/Alamofire"
 github "Moya/Moya"
+github "hkellaway/Gloss"
