@@ -14,6 +14,19 @@
 		5BF596F91E6A4F8100687BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF596F71E6A4F8100687BCD /* LaunchScreen.storyboard */; };
 		5BF597041E6A4F8100687BCD /* ios_github_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF597031E6A4F8100687BCD /* ios_github_challengeTests.swift */; };
 		5BF5970F1E6A4F8200687BCD /* ios_github_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5970E1E6A4F8200687BCD /* ios_github_challengeUITests.swift */; };
+		5BF5972A1E6A557600687BCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF5971D1E6A557600687BCD /* Alamofire.framework */; };
+		5BF5972B1E6A557600687BCD /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF5971E1E6A557600687BCD /* Argo.framework */; };
+		5BF5972C1E6A557600687BCD /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF5971F1E6A557600687BCD /* Moya.framework */; };
+		5BF5972D1E6A557600687BCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597201E6A557600687BCD /* Nimble.framework */; };
+		5BF5972E1E6A557600687BCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597211E6A557600687BCD /* Quick.framework */; };
+		5BF5972F1E6A557600687BCD /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597221E6A557600687BCD /* ReactiveSwift.framework */; };
+		5BF597301E6A557600687BCD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597231E6A557600687BCD /* Result.framework */; };
+		5BF597311E6A557600687BCD /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597241E6A557600687BCD /* Runes.framework */; };
+		5BF597321E6A557600687BCD /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597251E6A557600687BCD /* RxBlocking.framework */; };
+		5BF597331E6A557600687BCD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597261E6A557600687BCD /* RxCocoa.framework */; };
+		5BF597341E6A557600687BCD /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597271E6A557600687BCD /* RxMoya.framework */; };
+		5BF597351E6A557600687BCD /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597281E6A557600687BCD /* RxSwift.framework */; };
+		5BF597361E6A557600687BCD /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597291E6A557600687BCD /* RxTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +60,19 @@
 		5BF5970A1E6A4F8200687BCD /* ios-github-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-github-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF5970E1E6A4F8200687BCD /* ios_github_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_github_challengeUITests.swift; sourceTree = "<group>"; };
 		5BF597101E6A4F8200687BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF5971D1E6A557600687BCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		5BF5971E1E6A557600687BCD /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
+		5BF5971F1E6A557600687BCD /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		5BF597201E6A557600687BCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		5BF597211E6A557600687BCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		5BF597221E6A557600687BCD /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		5BF597231E6A557600687BCD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		5BF597241E6A557600687BCD /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		5BF597251E6A557600687BCD /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		5BF597261E6A557600687BCD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		5BF597271E6A557600687BCD /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		5BF597281E6A557600687BCD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		5BF597291E6A557600687BCD /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF5972A1E6A557600687BCD /* Alamofire.framework in Frameworks */,
+				5BF5972B1E6A557600687BCD /* Argo.framework in Frameworks */,
+				5BF5972C1E6A557600687BCD /* Moya.framework in Frameworks */,
+				5BF5972D1E6A557600687BCD /* Nimble.framework in Frameworks */,
+				5BF5972E1E6A557600687BCD /* Quick.framework in Frameworks */,
+				5BF5972F1E6A557600687BCD /* ReactiveSwift.framework in Frameworks */,
+				5BF597301E6A557600687BCD /* Result.framework in Frameworks */,
+				5BF597311E6A557600687BCD /* Runes.framework in Frameworks */,
+				5BF597321E6A557600687BCD /* RxBlocking.framework in Frameworks */,
+				5BF597331E6A557600687BCD /* RxCocoa.framework in Frameworks */,
+				5BF597341E6A557600687BCD /* RxMoya.framework in Frameworks */,
+				5BF597351E6A557600687BCD /* RxSwift.framework in Frameworks */,
+				5BF597361E6A557600687BCD /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,7 @@
 				5BF597021E6A4F8100687BCD /* ios-github-challengeTests */,
 				5BF5970D1E6A4F8200687BCD /* ios-github-challengeUITests */,
 				5BF596EC1E6A4F8100687BCD /* Products */,
+				5BF5971C1E6A557600687BCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +137,11 @@
 		5BF596ED1E6A4F8100687BCD /* ios-github-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				5BF597401E6A5AC500687BCD /* view */,
+				5BF5973F1E6A5ABF00687BCD /* interactor */,
+				5BF5973E1E6A5ABA00687BCD /* presenter */,
+				5BF5973D1E6A5A8400687BCD /* entity */,
+				5BF5973C1E6A5A7E00687BCD /* routes */,
 				5BF596EE1E6A4F8100687BCD /* AppDelegate.swift */,
 				5BF596F01E6A4F8100687BCD /* ViewController.swift */,
 				5BF596F21E6A4F8100687BCD /* Main.storyboard */,
@@ -125,6 +170,61 @@
 			path = "ios-github-challengeUITests";
 			sourceTree = "<group>";
 		};
+		5BF5971C1E6A557600687BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BF5971D1E6A557600687BCD /* Alamofire.framework */,
+				5BF5971E1E6A557600687BCD /* Argo.framework */,
+				5BF5971F1E6A557600687BCD /* Moya.framework */,
+				5BF597201E6A557600687BCD /* Nimble.framework */,
+				5BF597211E6A557600687BCD /* Quick.framework */,
+				5BF597221E6A557600687BCD /* ReactiveSwift.framework */,
+				5BF597231E6A557600687BCD /* Result.framework */,
+				5BF597241E6A557600687BCD /* Runes.framework */,
+				5BF597251E6A557600687BCD /* RxBlocking.framework */,
+				5BF597261E6A557600687BCD /* RxCocoa.framework */,
+				5BF597271E6A557600687BCD /* RxMoya.framework */,
+				5BF597281E6A557600687BCD /* RxSwift.framework */,
+				5BF597291E6A557600687BCD /* RxTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BF5973C1E6A5A7E00687BCD /* routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = routes;
+			sourceTree = "<group>";
+		};
+		5BF5973D1E6A5A8400687BCD /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		5BF5973E1E6A5ABA00687BCD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		5BF5973F1E6A5ABF00687BCD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = interactor;
+			sourceTree = "<group>";
+		};
+		5BF597401E6A5AC500687BCD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +235,7 @@
 				5BF596E71E6A4F8100687BCD /* Sources */,
 				5BF596E81E6A4F8100687BCD /* Frameworks */,
 				5BF596E91E6A4F8100687BCD /* Resources */,
+				5BF597371E6A55B100687BCD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +357,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BF597371E6A55B100687BCD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BF596E71E6A4F8100687BCD /* Sources */ = {
@@ -414,6 +544,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 89W7776J34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ios-github-challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edvmorango.ios-github-challenge";
@@ -427,6 +561,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 89W7776J34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ios-github-challenge/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edvmorango.ios-github-challenge";
