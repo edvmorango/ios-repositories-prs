@@ -12,7 +12,6 @@
 		5BF596F41E6A4F8100687BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF596F21E6A4F8100687BCD /* Main.storyboard */; };
 		5BF596F61E6A4F8100687BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF596F51E6A4F8100687BCD /* Assets.xcassets */; };
 		5BF596F91E6A4F8100687BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF596F71E6A4F8100687BCD /* LaunchScreen.storyboard */; };
-		5BF597041E6A4F8100687BCD /* ios_github_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF597031E6A4F8100687BCD /* ios_github_challengeTests.swift */; };
 		5BF5970F1E6A4F8200687BCD /* ios_github_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5970E1E6A4F8200687BCD /* ios_github_challengeUITests.swift */; };
 		5BF5972A1E6A557600687BCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF5971D1E6A557600687BCD /* Alamofire.framework */; };
 		5BF5972C1E6A557600687BCD /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF5971F1E6A557600687BCD /* Moya.framework */; };
@@ -28,6 +27,11 @@
 		5BF597361E6A557600687BCD /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597291E6A557600687BCD /* RxTest.framework */; };
 		5BF597421E6A5EFC00687BCD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF597411E6A5EFC00687BCD /* Repository.swift */; };
 		5BF597461E6A696000687BCD /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597451E6A696000687BCD /* Gloss.framework */; };
+		5BF5974F1E6A6DC400687BCD /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF597201E6A557600687BCD /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BF597501E6A6DC400687BCD /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BF597211E6A557600687BCD /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BF597581E6A6E8700687BCD /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF597571E6A6E8700687BCD /* RepositoryTests.swift */; };
+		5BF597591E6A71BC00687BCD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597201E6A557600687BCD /* Nimble.framework */; };
+		5BF5975A1E6A71BC00687BCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597211E6A557600687BCD /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5BF597471E6A6D6000687BCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5BF5974F1E6A6DC400687BCD /* Nimble.framework in CopyFiles */,
+				5BF597501E6A6DC400687BCD /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5BF596EB1E6A4F8100687BCD /* ios-github-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-github-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF596EE1E6A4F8100687BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +74,11 @@
 		5BF596F81E6A4F8100687BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF596FA1E6A4F8100687BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF596FF1E6A4F8100687BCD /* ios-github-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-github-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BF597031E6A4F8100687BCD /* ios_github_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_github_challengeTests.swift; sourceTree = "<group>"; };
 		5BF597051E6A4F8100687BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF5970A1E6A4F8200687BCD /* ios-github-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-github-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF5970E1E6A4F8200687BCD /* ios_github_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_github_challengeUITests.swift; sourceTree = "<group>"; };
 		5BF597101E6A4F8200687BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF5971D1E6A557600687BCD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		5BF5971E1E6A557600687BCD /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		5BF5971F1E6A557600687BCD /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		5BF597201E6A557600687BCD /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		5BF597211E6A557600687BCD /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -75,8 +91,8 @@
 		5BF597281E6A557600687BCD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		5BF597291E6A557600687BCD /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		5BF597411E6A5EFC00687BCD /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		5BF597431E6A616E00687BCD /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		5BF597451E6A696000687BCD /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
+		5BF597571E6A6E8700687BCD /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF597591E6A71BC00687BCD /* Nimble.framework in Frameworks */,
+				5BF5975A1E6A71BC00687BCD /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +177,11 @@
 		5BF597021E6A4F8100687BCD /* ios-github-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				5BF597031E6A4F8100687BCD /* ios_github_challengeTests.swift */,
+				5BF597561E6A6E7A00687BCD /* view */,
+				5BF597551E6A6E7500687BCD /* interactor */,
+				5BF597541E6A6E7000687BCD /* presenter */,
+				5BF597531E6A6E6900687BCD /* entity */,
+				5BF597521E6A6E6500687BCD /* routes */,
 				5BF597051E6A4F8100687BCD /* Info.plist */,
 			);
 			path = "ios-github-challengeTests";
@@ -178,9 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF597451E6A696000687BCD /* Gloss.framework */,
-				5BF597431E6A616E00687BCD /* Curry.framework */,
 				5BF5971D1E6A557600687BCD /* Alamofire.framework */,
-				5BF5971E1E6A557600687BCD /* Argo.framework */,
 				5BF5971F1E6A557600687BCD /* Moya.framework */,
 				5BF597201E6A557600687BCD /* Nimble.framework */,
 				5BF597211E6A557600687BCD /* Quick.framework */,
@@ -232,6 +252,42 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		5BF597521E6A6E6500687BCD /* routes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = routes;
+			sourceTree = "<group>";
+		};
+		5BF597531E6A6E6900687BCD /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				5BF597571E6A6E8700687BCD /* RepositoryTests.swift */,
+			);
+			name = entity;
+			sourceTree = "<group>";
+		};
+		5BF597541E6A6E7000687BCD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		5BF597551E6A6E7500687BCD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = interactor;
+			sourceTree = "<group>";
+		};
+		5BF597561E6A6E7A00687BCD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +299,7 @@
 				5BF596E81E6A4F8100687BCD /* Frameworks */,
 				5BF596E91E6A4F8100687BCD /* Resources */,
 				5BF597371E6A55B100687BCD /* ShellScript */,
+				5BF597471E6A6D6000687BCD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -409,7 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF597041E6A4F8100687BCD /* ios_github_challengeTests.swift in Sources */,
+				5BF597581E6A6E8700687BCD /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +644,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 89W7776J34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ios-github-challengeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edvmorango.ios-github-challengeTests";
@@ -602,6 +663,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 89W7776J34;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "ios-github-challengeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edvmorango.ios-github-challengeTests";

@@ -33,14 +33,16 @@ struct Repository: Decodable{
     
 }
 
+
+
+
 struct Owner : Decodable{
     let name : String
     let photo : String
     
     init?(json: JSON) {
-        self.name = ("name" <~~ json)!
-        self.photo = ("photo" <~~ json)!
-        
+        self.name = ("login" <~~ json)!
+        self.photo = ("avatar_url" <~~ json)!
     }
     
 }
