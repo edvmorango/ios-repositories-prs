@@ -6,11 +6,9 @@
 //  Copyright © 2017 José Eduardo Vieira Morango. All rights reserved.
 //
 
-
-
 import Gloss
 
-
+// Import UIKIt and references from ViewController are forbidden
 struct Repository: Decodable{
 
     let id : Int
@@ -20,7 +18,6 @@ struct Repository: Decodable{
     let forks: Int
     let owner : Owner
 
-    
     init?(json: JSON) {
         self.id = ("id" <~~ json)!
         self.name = ("name" <~~ json)!
@@ -29,7 +26,6 @@ struct Repository: Decodable{
         self.forks = ("forks" <~~ json)!
         self.owner = ("owner" <~~ json)!
     }
-    
     
 }
 
@@ -50,8 +46,6 @@ struct PullRequest: Decodable{
     let date : Date
     let body : String
     
-    
-    
     init?(json: JSON) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-dd-MM'T'HH:mm:ss'Z'"
@@ -62,7 +56,6 @@ struct PullRequest: Decodable{
 
     }
     
-
 }
 
 
