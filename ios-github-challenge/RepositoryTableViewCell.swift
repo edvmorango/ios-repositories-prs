@@ -14,6 +14,7 @@ class RepositoryTableViewCell : UITableViewCell{
 
     @IBOutlet weak var lbRepositoryName: UILabel!
 
+    @IBOutlet weak var ivOwner: UIImageView!
     
     
 }

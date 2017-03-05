@@ -21,7 +21,7 @@ class GithubAPIManagerTests : QuickSpec{
     
             it("search repositories"){
             let provider = GithubAPIManager()
-            let obs = provider.searchRepositories(maxPage: 1)
+//            let obs = provider.searchRepositories(maxPage: 1)
           
             }
       

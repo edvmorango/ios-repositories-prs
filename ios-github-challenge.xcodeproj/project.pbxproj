@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B559CB21E6B942900808F9E /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CB11E6B942900808F9E /* ImageCaching.swift */; };
 		5B559CB61E6B9AAB00808F9E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CB51E6B9AAB00808F9E /* MainViewModel.swift */; };
 		5B559CB81E6B9D3300808F9E /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CB71E6B9D3300808F9E /* RepositoryTableViewCell.swift */; };
+		5B559CC71E6C8BCF00808F9E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B559CC61E6C8BCF00808F9E /* SDWebImage.framework */; };
+		5B559CC91E6C8CF900808F9E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CC81E6C8CF900808F9E /* ImageCache.swift */; };
 		5BF596EF1E6A4F8100687BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF596EE1E6A4F8100687BCD /* AppDelegate.swift */; };
 		5BF596F11E6A4F8100687BCD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF596F01E6A4F8100687BCD /* MainViewController.swift */; };
 		5BF596F41E6A4F8100687BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF596F21E6A4F8100687BCD /* Main.storyboard */; };
@@ -81,9 +82,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B559CB11E6B942900808F9E /* ImageCaching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
 		5B559CB51E6B9AAB00808F9E /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5B559CB71E6B9D3300808F9E /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		5B559CC61E6C8BCF00808F9E /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		5B559CC81E6C8CF900808F9E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		5BF596EB1E6A4F8100687BCD /* ios-github-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-github-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF596EE1E6A4F8100687BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF596F01E6A4F8100687BCD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				5BF597321E6A557600687BCD /* RxBlocking.framework in Frameworks */,
 				5BF597331E6A557600687BCD /* RxCocoa.framework in Frameworks */,
 				5BF597341E6A557600687BCD /* RxMoya.framework in Frameworks */,
+				5B559CC71E6C8BCF00808F9E /* SDWebImage.framework in Frameworks */,
 				5BF597351E6A557600687BCD /* RxSwift.framework in Frameworks */,
 				5BF597361E6A557600687BCD /* RxTest.framework in Frameworks */,
 			);
@@ -162,7 +165,7 @@
 		5B559CB01E6B941C00808F9E /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				5B559CB11E6B942900808F9E /* ImageCaching.swift */,
+				5B559CC81E6C8CF900808F9E /* ImageCache.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 		5BF5971C1E6A557600687BCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B559CC61E6C8BCF00808F9E /* SDWebImage.framework */,
 				5BF597451E6A696000687BCD /* Gloss.framework */,
 				5BF5971D1E6A557600687BCD /* Alamofire.framework */,
 				5BF5971F1E6A557600687BCD /* Moya.framework */,
@@ -448,6 +452,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			outputPaths = (
 			);
@@ -464,11 +469,11 @@
 			files = (
 				5B559CB61E6B9AAB00808F9E /* MainViewModel.swift in Sources */,
 				5BF596F11E6A4F8100687BCD /* MainViewController.swift in Sources */,
+				5B559CC91E6C8CF900808F9E /* ImageCache.swift in Sources */,
 				5BF596EF1E6A4F8100687BCD /* AppDelegate.swift in Sources */,
 				5BF5975F1E6AEB9100687BCD /* GithubAPIManager.swift in Sources */,
 				5BF597421E6A5EFC00687BCD /* Entities.swift in Sources */,
 				5BF5975D1E6AE46F00687BCD /* GithubAPI.swift in Sources */,
-				5B559CB21E6B942900808F9E /* ImageCaching.swift in Sources */,
 				5B559CB81E6B9D3300808F9E /* RepositoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +626,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 89W7776J34;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -638,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 89W7776J34;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

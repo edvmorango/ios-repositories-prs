@@ -57,9 +57,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWz-iU-U2B">
+                                                    <rect key="frame" x="124" y="-12" width="111" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ivOwner" destination="aWz-iU-U2B" id="HPE-Xa-Xfg"/>
                                             <outlet property="lbRepositoryName" destination="6q4-PD-bJ1" id="QP7-bz-yxn"/>
                                         </connections>
                                     </tableViewCell>
