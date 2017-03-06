@@ -22,21 +22,13 @@ class MainViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         
-       
+    
+        
+        
         viewModel.repositories.asObservable().bindTo(table.rx.items(cellIdentifier: "cell", cellType: RepositoryTableViewCell.self)){ (r,e,c) in
             
             c.lbRepositoryName.text = "\(e.name)"
-            
-            
-            self.viewModel.fetchImage.asObservable().flatMapLatest{ rep in
-                return SDWebImageManager().cacheImage(url : URL(string: e.owner.photo)!)
-                }.subscribe(onNext: { img in
-                    
-                    c.ivOwner.image = img
-                    
-                }).addDisposableTo(self.bag)
-            
-            self.viewModel.fetchImage.onNext(e)
+            c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
             
             
             }.addDisposableTo(bag)
