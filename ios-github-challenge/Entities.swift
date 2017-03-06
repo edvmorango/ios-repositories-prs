@@ -21,7 +21,7 @@ struct Repository: Decodable{
     init?(json: JSON) {
         self.id = ("id" <~~ json)!
         self.name = ("name" <~~ json)!
-        self.description = ("description" <~~ json)!
+        self.description = ("description" <~~ json) ?? " "
         self.stars = ("stargazers_count" <~~ json)!
         self.forks = ("forks" <~~ json)!
         self.owner = ("owner" <~~ json)!

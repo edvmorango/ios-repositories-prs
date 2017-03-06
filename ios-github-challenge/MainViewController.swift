@@ -15,26 +15,25 @@ class MainViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
     var bag = DisposeBag()
-    let viewModel = MainViewModel()
+    var viewModel = MainViewModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-    
-        
-        
-        viewModel.repositories.asObservable().bindTo(table.rx.items(cellIdentifier: "cell", cellType: RepositoryTableViewCell.self)){ (r,e,c) in
+        viewModel.repositories.asObservable().scan([Repository](), accumulator: {
+            (current : [Repository], new : [Repository]) -> [Repository] in (current + new).sorted(by: { $0.0.stars > $0.1.stars})   })
+            .bindTo(table.rx.items(cellIdentifier: "cell", cellType: RepositoryTableViewCell.self)){ (r,e,c) in
             
-            c.lbRepositoryName.text = "\(e.name)"
+            c.lbRepositoryName.text = "\(e.stars)-\(e.name)"
             c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
             
             
             }.addDisposableTo(bag)
-        
-        viewModel.checkRepositories()
-        
+    
+            viewModel.currentPage = 1
+
     
     }
 

@@ -255,7 +255,8 @@
 		5BF5973F1E6A5ABF00687BCD /* service */ = {
 			isa = PBXGroup;
 			children = (
-				5BF5975B1E6AE43E00687BCD /* API */,
+				5BF5975C1E6AE46F00687BCD /* GithubAPI.swift */,
+				5BF5975E1E6AEB9100687BCD /* GithubAPIManager.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -276,15 +277,6 @@
 				5BF597611E6B112D00687BCD /* GithubAPIManagerTests.swift */,
 			);
 			name = modelview;
-			sourceTree = "<group>";
-		};
-		5BF5975B1E6AE43E00687BCD /* API */ = {
-			isa = PBXGroup;
-			children = (
-				5BF5975C1E6AE46F00687BCD /* GithubAPI.swift */,
-				5BF5975E1E6AEB9100687BCD /* GithubAPIManager.swift */,
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
