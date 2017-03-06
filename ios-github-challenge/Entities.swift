@@ -7,7 +7,7 @@
 //
 
 import Gloss
-
+import Foundation
 // Import UIKIt and references from ViewController are forbidden
 struct Repository: Decodable{
 
@@ -47,15 +47,17 @@ struct PullRequest: Decodable{
     let title : String
     let date : Date
     let body : String
-    
+    let url : String
     init?(json: JSON) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-dd-MM'T'HH:mm:ss'Z'"
+        dateFormatter.timeZone = NSTimeZone.local
+        
         self.owner =  ("user" <~~ json)!
         self.title =  ("title" <~~ json)!
-        self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json)!
+        self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json) ?? Date()
         self.body =   ("body" <~~ json)!
-
+        self.url = ("url" <~~ json)!
     }
     
 }

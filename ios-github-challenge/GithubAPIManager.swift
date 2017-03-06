@@ -18,6 +18,10 @@ extension Response{
     func getJSON() -> JSON{
         return try! self.mapJSON() as! JSON
     }
+    
+    func getJSONArray() -> [JSON]{
+        return try! self.mapJSON() as! [JSON]
+    }
 }
 
 struct GithubAPIManager{
@@ -59,14 +63,22 @@ extension GithubAPIManager{
             case .error(let error): print(error)
             default : break
             }
-        }
+        }.addDisposableTo(bag)
     }
     
     
-    public func searchPullRequests(repository: Repository){
+    public func searchPullRequests( container:  Variable<[PullRequest]>,repository: Repository){
     
         let rxProvider = RxMoyaProvider<GithubAPI>()
-        rxProvider.request(.pullRequest(repository: repository)).filterSuccessfulStatusCodes().map{ $0 }
+        rxProvider.request(.pullRequest(repository: repository)).filterSuccessfulStatusCodes().map{ [PullRequest].from( jsonArray: $0.getJSONArray()  ) }.subscribe{ event in
+            switch event{
+            case .next(let pr) :    container.value = pr!
+            case .error(let error): print(error)
+            default : break
+            }
+
+        
+        }.addDisposableTo(bag)
         
     }
     

@@ -15,19 +15,13 @@ struct MainViewModel{
     var currentPage :  Int = 1 {
         didSet{
             if self.currentPage < 35{
-         service.searchRepositories(container: repositories, maxPage: self.currentPage)
+                service.searchRepositories(container: repositories, maxPage: self.currentPage)
+                }
             }
-            }
-    }
-    init() {
-
     }
     
     func getOwner(name : String , handler : @escaping (Owner) -> Void  ){
-    
         service.getUser(username: name  , setUser: handler)
-        
-        
     }
     
     

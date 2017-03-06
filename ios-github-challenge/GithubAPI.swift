@@ -25,8 +25,11 @@ extension GithubAPI: TargetType{
     /// The path to be appended to `baseURL` to form the full `URL`.
     public var path: String {
         switch self {
-        case .repository(let page): return "search/repositories?q=language:Swift&sort=stars&page=\(page)"
-        case .pullRequest(let repository): return "repos/\(repository.owner.name)/\(repository.name)/pulls"
+        case .repository(let page): let a = "search/repositories?q=language:Swift&sort=stars&page=\(page)"
+            return a
+        case .pullRequest(let repository):
+            let a = "repos/\(repository.owner.login)/\(repository.name)/pulls"
+            return a
         case .user(let username) :  return "users/\(username)"
         }
         

@@ -43,7 +43,7 @@ class MainViewController: UIViewController, UITableViewDelegate {
             }.addDisposableTo(bag)
     
             viewModel.currentPage = 1
-            viewModel.currentPage += 1
+//            viewModel.currentPage += 1
         table.rx.itemSelected.subscribe{ event in
            
             self.performSegue(withIdentifier: "pullRequest", sender: self.viewModel.repositories.value[event.element!.item] )
@@ -58,8 +58,9 @@ class MainViewController: UIViewController, UITableViewDelegate {
         if segue.identifier == "pullRequest"{
             
           let rep  =  sender as! Repository
-        
-            print(rep)
+          let vc = segue.destination as! PullRequestViewController
+            vc.viewModel.repository = rep
+            
         }
         
         
