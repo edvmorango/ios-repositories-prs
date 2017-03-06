@@ -53,11 +53,13 @@ class MainViewController: UIViewController, UITableViewDelegate {
             
             }.addDisposableTo(bag)
         
-//        table.rx.contentOffset.throttle(3.0, scheduler: MainScheduler.instance).subscribe{ _ in
-//            if self.table.isNearBottomEdge(){
-//                self.viewModel.currentPage += 1
-//            }
-//        }.addDisposableTo(bag)
+        table.rx.contentOffset.throttle(1.5, scheduler: MainScheduler.instance).subscribe{ _ in
+            if self.table.isNearBottomEdge(){
+                
+                self.viewModel.currentPage += 1
+                print(self.viewModel.currentPage)
+            }
+        }.addDisposableTo(bag)
         
         
     }
