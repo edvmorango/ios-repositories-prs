@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import SDWebImage
 class PullRequestViewController : UIViewController, UITableViewDelegate{
 
     @IBOutlet weak var table: UITableView!
@@ -26,9 +27,16 @@ class PullRequestViewController : UIViewController, UITableViewDelegate{
             c.lbPRTitle.text = e.title
             c.lbPRDescription.text = e.body
             c.lbLogin.text = e.owner.login
-            c.lbUserName.text = e.owner.name
-        
-    }.addDisposableTo(bag)
+            c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
+            self.viewModel.getOwner(name: e.owner.login , handler : { owner in
+                print(owner)
+                c.lbUserName.text = owner.name
+            
+            })
+            
+            
+            
+            }.addDisposableTo(bag)
     
     }
 

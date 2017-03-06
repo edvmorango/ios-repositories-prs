@@ -39,13 +39,16 @@ class MainViewController: UIViewController, UITableViewDelegate {
             c.lbUserName.text = e.owner.name
             c.lbForks.text = "\(e.forks)"
             c.lbStars.text = "\(e.stars)"
+              
             c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
             self.viewModel.getOwner(name: e.owner.login , handler :{ owner in
-                    c.lbUserName.text = owner.name
-                })
+                c.lbUserName.text = owner.name })
+           
             }.addDisposableTo(bag)
     
             viewModel.currentPage = 1
+        
+        
             table.rx.itemSelected.subscribe{ event in
             
             

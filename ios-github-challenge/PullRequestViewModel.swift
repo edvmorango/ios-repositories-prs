@@ -11,7 +11,7 @@ import RxSwift
 import SDWebImage
 
 
-struct PullRequestViewModel{
+struct PullRequestViewModel : OwnerGetter{
     let service = GithubAPIManager()
     var pullRequests = Variable<[PullRequest]>([])
     var repository: Repository? = nil{
@@ -21,5 +21,15 @@ struct PullRequestViewModel{
             }
         }
     }
+    //For some reason, if i create this function inside an extension, the closure doesn't execute
+    func getOwner(name : String , handler : @escaping (Owner) -> Void  ){
+        service.getUser(username: name  , setUser: handler)
+    }
+    
+    
 
+    
+    
+    
+    
 }
