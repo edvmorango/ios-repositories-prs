@@ -51,11 +51,12 @@ struct PullRequest: Decodable{
     init?(json: JSON) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-dd-MM'T'HH:mm:ss'Z'"
-        dateFormatter.timeZone = NSTimeZone.local
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
         
         self.owner =  ("user" <~~ json)!
         self.title =  ("title" <~~ json)!
-        self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json) ?? Date()
+        self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json)
+            ?? Date()
         self.body =   ("body" <~~ json)!
         self.url = ("url" <~~ json)!
     }

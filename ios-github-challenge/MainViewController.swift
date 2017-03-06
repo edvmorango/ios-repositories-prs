@@ -11,23 +11,28 @@ import RxSwift
 import RxCocoa
 import Gloss
 import SDWebImage
+
+extension UIScrollView{
+    
+    func isNearBottomEdge(edgeOffset: CGFloat = 20.0) -> Bool{
+            return self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
+    }
+
+}
+
+
 class MainViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
     var bag = DisposeBag()
     var viewModel = MainViewModel()
-    
-    
+    static let startLoadingOffset: CGFloat = 20.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-            
-        let  tableObserver = viewModel.repositories.asObservable().scan([Repository](), accumulator: {
-        (current : [Repository], new : [Repository]) -> [Repository] in (current + new).sorted(by: { $0.0.stars > $0.1.stars})   })
-     
-            tableObserver.bindTo(table.rx.items(cellIdentifier: "cell", cellType: RepositoryTableViewCell.self)){ (r,e,c) in
-            
+        viewModel.repositories.asObservable()
+            .bindTo(table.rx.items(cellIdentifier: "cell", cellType:            RepositoryTableViewCell.self)){ (r,e,c) in
             c.lbRepositoryName.text = e.name
             c.lbRepositoryDesc.text = e.description
             c.lbUserLogin.text = e.owner.login
@@ -38,17 +43,22 @@ class MainViewController: UIViewController, UITableViewDelegate {
             self.viewModel.getOwner(name: e.owner.login , handler :{ owner in
                     c.lbUserName.text = owner.name
                 })
-                
-            
             }.addDisposableTo(bag)
     
             viewModel.currentPage = 1
-//            viewModel.currentPage += 1
-        table.rx.itemSelected.subscribe{ event in
-           
+            table.rx.itemSelected.subscribe{ event in
+            
+            
             self.performSegue(withIdentifier: "pullRequest", sender: self.viewModel.repositories.value[event.element!.item] )
             
             }.addDisposableTo(bag)
+        
+//        table.rx.contentOffset.throttle(3.0, scheduler: MainScheduler.instance).subscribe{ _ in
+//            if self.table.isNearBottomEdge(){
+//                self.viewModel.currentPage += 1
+//            }
+//        }.addDisposableTo(bag)
+        
         
     }
     

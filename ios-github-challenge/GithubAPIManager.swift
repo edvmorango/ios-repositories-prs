@@ -47,8 +47,9 @@ extension GithubAPIManager{
         let rxProvider = RxMoyaProvider<GithubAPI>(endpointClosure: urlSolver)
         rxProvider.request(.repository(page: maxPage)).filterSuccessfulStatusCodes().map{  [Repository].from(jsonArray:$0.getJSON()["items"] as! [JSON])  }.subscribe{ event in
             switch event{
-            case .next(let rep) : container.value = rep!
-            case .error(let error): print(error)
+            case .next(let rep) : container.value.append(contentsOf: rep!)
+            case .error(let error):
+                print(error)
             default : break
             }
         }.addDisposableTo(bag)
@@ -60,7 +61,8 @@ extension GithubAPIManager{
         rxProvider.request(.user(username: username)).filterSuccessfulStatusCodes().map{ Owner.init(json: $0.getJSON()) }.subscribe{ event in
             switch event{
             case .next(let ow) :    setUser(ow!)
-            case .error(let error): print(error)
+            case .error(let error):
+                print(error)
             default : break
             }
         }.addDisposableTo(bag)
