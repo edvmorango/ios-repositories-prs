@@ -29,7 +29,15 @@ class MainViewController: UIViewController, UITableViewDelegate {
             c.lbRepositoryName.text = e.name
             c.lbRepositoryDesc.text = e.description
             c.lbUserLogin.text = e.owner.login
+            
+                
+                self.viewModel.getOwner(name: e.owner.login , handler :{ owner in
+                    c.lbUserName.text = owner.name
+                })
+                
             c.lbUserName.text = e.owner.name
+            
+                
             c.lbForks.text = "\(e.forks)"
             c.lbStars.text = "\(e.stars)"
             
@@ -40,7 +48,6 @@ class MainViewController: UIViewController, UITableViewDelegate {
     
             viewModel.currentPage = 1
 
-    
     }
 
     

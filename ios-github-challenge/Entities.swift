@@ -16,7 +16,7 @@ struct Repository: Decodable{
     let description: String
     let stars: Int
     let forks: Int
-    let owner : Owner
+    var owner : Owner
 
     init?(json: JSON) {
         self.id = ("id" <~~ json)!
@@ -36,7 +36,7 @@ struct Owner : Decodable{
     
     init?(json: JSON) {
         self.login = ("login" <~~ json)!
-        self.name = ("login" <~~ json)!
+        self.name = ("name" <~~ json) ?? ""
         self.photo = ("avatar_url" <~~ json)!
     }
     

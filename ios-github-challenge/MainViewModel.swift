@@ -23,12 +23,12 @@ struct MainViewModel{
 
     }
     
-    func checkRepositories(page: Int){
+    func getOwner(name : String , handler : @escaping (Owner) -> Void  ){
+    
+        service.getUser(username: name  , setUser: handler)
         
-       
         
     }
-    
     
     
 

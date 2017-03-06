@@ -38,10 +38,6 @@ struct GithubAPIManager{
 
 extension GithubAPIManager{
     
-   
-
-    
-    
     public func searchRepositories(container: Variable<[Repository]> ,maxPage : Int) {
         
         let rxProvider = RxMoyaProvider<GithubAPI>(endpointClosure: urlSolver)
@@ -54,7 +50,19 @@ extension GithubAPIManager{
         }.addDisposableTo(bag)
         
         }
-        
+    
+    public func getUser(username: String, setUser: @escaping (Owner) -> Void){
+        let rxProvider = RxMoyaProvider<GithubAPI>(endpointClosure: urlSolver)
+        rxProvider.request(.user(username: username)).filterSuccessfulStatusCodes().map{ Owner.init(json: $0.getJSON()) }.subscribe{ event in
+            switch event{
+            case .next(let ow) :    setUser(ow!)
+            case .error(let error): print(error)
+            default : break
+            }
+        }
+    }
+    
+    
     public func searchPullRequests(repository: Repository){
     
         let rxProvider = RxMoyaProvider<GithubAPI>()

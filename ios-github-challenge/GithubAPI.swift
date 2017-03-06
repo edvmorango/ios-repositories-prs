@@ -13,7 +13,7 @@ import Foundation
 enum GithubAPI{
     case repository(page: Int)
     case pullRequest(repository: Repository)
-    case getImage(url: String)
+    case user(username : String)
 }
 extension GithubAPI: TargetType{
     /// The method used for parameter encoding.
@@ -27,13 +27,13 @@ extension GithubAPI: TargetType{
         switch self {
         case .repository(let page): return "search/repositories?q=language:Swift&sort=stars&page=\(page)"
         case .pullRequest(let repository): return "repos/\(repository.owner.name)/\(repository.name)/pulls"
-        case .getImage(let url) : return url
+        case .user(let username) :  return "users/\(username)"
         }
         
     }
     
     var method: Moya.Method{
-        switch self{ case .repository, .pullRequest, .getImage : return .get}
+        switch self{ case .repository, .pullRequest, .user : return .get}
     }
     
     
@@ -44,7 +44,7 @@ extension GithubAPI: TargetType{
         switch self{
         case .repository : return nil
         case .pullRequest : return  nil
-        case .getImage : return nil
+        case .user : return nil
         }
     }
     
