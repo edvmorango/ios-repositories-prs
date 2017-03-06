@@ -42,14 +42,12 @@ extension GithubAPIManager{
 
     
     
-    public func searchRepositories(container: Variable<[Repository]>, single: Variable<Repository?> ,maxPage : Int) {
+    public func searchRepositories(container: Variable<[Repository]> ,maxPage : Int) {
         
         let rxProvider = RxMoyaProvider<GithubAPI>(endpointClosure: urlSolver)
         rxProvider.request(.repository(page: maxPage)).filterSuccessfulStatusCodes().map{  [Repository].from(jsonArray:$0.getJSON()["items"] as! [JSON])  }.subscribe{ event in
             switch event{
-            case .next(let rep) : rep?.forEach{ x in  single.value = x}
-                                  container.value = rep!
-           
+            case .next(let rep) : container.value = rep!
             case .error(let error): print(error)
             default : break
             }

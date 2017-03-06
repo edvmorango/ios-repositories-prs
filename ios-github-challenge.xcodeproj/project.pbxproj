@@ -10,7 +10,6 @@
 		5B559CB61E6B9AAB00808F9E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CB51E6B9AAB00808F9E /* MainViewModel.swift */; };
 		5B559CB81E6B9D3300808F9E /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CB71E6B9D3300808F9E /* RepositoryTableViewCell.swift */; };
 		5B559CC71E6C8BCF00808F9E /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B559CC61E6C8BCF00808F9E /* SDWebImage.framework */; };
-		5B559CC91E6C8CF900808F9E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B559CC81E6C8CF900808F9E /* ImageCache.swift */; };
 		5BF596EF1E6A4F8100687BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF596EE1E6A4F8100687BCD /* AppDelegate.swift */; };
 		5BF596F11E6A4F8100687BCD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF596F01E6A4F8100687BCD /* MainViewController.swift */; };
 		5BF596F41E6A4F8100687BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF596F21E6A4F8100687BCD /* Main.storyboard */; };
@@ -85,7 +84,6 @@
 		5B559CB51E6B9AAB00808F9E /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5B559CB71E6B9D3300808F9E /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		5B559CC61E6C8BCF00808F9E /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
-		5B559CC81E6C8CF900808F9E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		5BF596EB1E6A4F8100687BCD /* ios-github-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-github-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF596EE1E6A4F8100687BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF596F01E6A4F8100687BCD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -162,14 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B559CB01E6B941C00808F9E /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				5B559CC81E6C8CF900808F9E /* ImageCache.swift */,
-			);
-			name = utils;
-			sourceTree = "<group>";
-		};
 		5B559CB31E6B983E00808F9E /* modelview */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +255,6 @@
 		5BF5973F1E6A5ABF00687BCD /* service */ = {
 			isa = PBXGroup;
 			children = (
-				5B559CB01E6B941C00808F9E /* utils */,
 				5BF5975B1E6AE43E00687BCD /* API */,
 			);
 			name = service;
@@ -469,7 +458,6 @@
 			files = (
 				5B559CB61E6B9AAB00808F9E /* MainViewModel.swift in Sources */,
 				5BF596F11E6A4F8100687BCD /* MainViewController.swift in Sources */,
-				5B559CC91E6C8CF900808F9E /* ImageCache.swift in Sources */,
 				5BF596EF1E6A4F8100687BCD /* AppDelegate.swift in Sources */,
 				5BF5975F1E6AEB9100687BCD /* GithubAPIManager.swift in Sources */,
 				5BF597421E6A5EFC00687BCD /* Entities.swift in Sources */,
