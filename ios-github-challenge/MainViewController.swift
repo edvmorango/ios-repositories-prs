@@ -22,34 +22,48 @@ class MainViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         
-        viewModel.repositories.asObservable().scan([Repository](), accumulator: {
-            (current : [Repository], new : [Repository]) -> [Repository] in (current + new).sorted(by: { $0.0.stars > $0.1.stars})   })
-            .bindTo(table.rx.items(cellIdentifier: "cell", cellType: RepositoryTableViewCell.self)){ (r,e,c) in
+            
+        let  tableObserver = viewModel.repositories.asObservable().scan([Repository](), accumulator: {
+        (current : [Repository], new : [Repository]) -> [Repository] in (current + new).sorted(by: { $0.0.stars > $0.1.stars})   })
+     
+            tableObserver.bindTo(table.rx.items(cellIdentifier: "cell", cellType: RepositoryTableViewCell.self)){ (r,e,c) in
             
             c.lbRepositoryName.text = e.name
             c.lbRepositoryDesc.text = e.description
             c.lbUserLogin.text = e.owner.login
-            
-                
-                self.viewModel.getOwner(name: e.owner.login , handler :{ owner in
+            c.lbUserName.text = e.owner.name
+            c.lbForks.text = "\(e.forks)"
+            c.lbStars.text = "\(e.stars)"
+            c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
+            self.viewModel.getOwner(name: e.owner.login , handler :{ owner in
                     c.lbUserName.text = owner.name
                 })
                 
-            c.lbUserName.text = e.owner.name
-            
-                
-            c.lbForks.text = "\(e.forks)"
-            c.lbStars.text = "\(e.stars)"
-            
-            c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
-            
             
             }.addDisposableTo(bag)
     
             viewModel.currentPage = 1
-
+            viewModel.currentPage += 1
+        table.rx.itemSelected.subscribe{ event in
+           
+            self.performSegue(withIdentifier: "pullRequest", sender: self.viewModel.repositories.value[event.element!.item] )
+            
+            }.addDisposableTo(bag)
+        
     }
-
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "pullRequest"{
+            
+          let rep  =  sender as! Repository
+        
+            print(rep)
+        }
+        
+        
+    }
     
 
 }
