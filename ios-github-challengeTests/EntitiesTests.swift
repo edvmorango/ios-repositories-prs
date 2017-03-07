@@ -67,18 +67,22 @@ class EntitiesTests : QuickSpec{
         ]
         
     ]
+    
+    let prCountMock: JSON = [
+        "total_count" : 1000
+    ]
   
     override func spec(){
 
         describe("entities"){
             
-        it("owner is decodable"){
-            let rOwner  = Owner(json: self.repositoryMock["owner"] as! JSON)
-            let pOwner =  Owner(json: self.prMock["user"] as! JSON)
-            expect(rOwner?.login).to(equal("Alamofire"))
-            expect(pOwner?.login).to(equal("helloyako"))
+            it("owner is decodable"){
+                let rOwner  = Owner(json: self.repositoryMock["owner"] as! JSON)
+                let pOwner =  Owner(json: self.prMock["user"] as! JSON)
+                expect(rOwner?.login).to(equal("Alamofire"))
+                expect(pOwner?.login).to(equal("helloyako"))
         }
-        it("repository is decodable"){
+            it("repository is decodable"){
                 let repository = Repository(json: self.repositoryMock)
                 expect(repository?.id).to(equal(22458259))
         }
@@ -88,13 +92,14 @@ class EntitiesTests : QuickSpec{
         }
          
             it("list of repositories is decodable"){
-            
                 let repositories : [Repository] =  [Repository].from(jsonArray: self.compositeRepositoryMock["items"] as! [JSON])!
-                
                 expect(repositories.count).to(equal(2))
-            
             }
-            
+            it("count of prs is decodable"){
+                let prCount = PullCount(json: self.prCountMock)
+                expect(prCount?.total_count).to(equal(1000))
+                
+            }
             
         }
         

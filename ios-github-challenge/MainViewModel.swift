@@ -12,7 +12,7 @@ import SDWebImage
 struct MainViewModel{
     let service = GithubAPIManager()
     var repositories = Variable<[Repository]>([])
-    var currentPage :  Int = 1 {
+    var currentPage :  Int = 0 {
         didSet{
             if self.currentPage < 35{
                 service.searchRepositories(container: repositories, maxPage: self.currentPage)
