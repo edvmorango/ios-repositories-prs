@@ -84,6 +84,18 @@ extension GithubAPIManager{
         
     }
     
+    public func prRequest( container: Variable<Int> , repository: Repository, state: String){
+    
+        let rxProvider = RxMoyaProvider<GithubAPI>(endpointClosure: urlSolver)
+        rxProvider.request(.prIssues(repository: repository, state: state)).filterSuccessfulStatusCodes().map{ PullCount(json:$0.getJSON())}.subscribe{ event in
+            switch event{
+            case .next(let value) : container.value = value!.total_count
+            case .error(let error): print(error)
+            default : break
+            }
+        }.addDisposableTo(bag)
+        
+    }
     
 
 }

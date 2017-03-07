@@ -12,7 +12,7 @@ import Foundation
 protocol OwnerGetter {
     
     
-    func getOwner(name : String , handler : @escaping (Owner) -> Void  )
+    func getOwner(login : String , handler : @escaping (Owner) -> Void  )
 
 }
 

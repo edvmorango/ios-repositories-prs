@@ -14,16 +14,25 @@ import SDWebImage
 struct PullRequestViewModel : OwnerGetter{
     let service = GithubAPIManager()
     var pullRequests = Variable<[PullRequest]>([])
+    var openPR = Variable<Int>(0)
+    var closedPR = Variable<Int>(0)
+    
+    
     var repository: Repository? = nil{
         didSet{
             if repository != nil {
                 service.searchPullRequests(container: pullRequests , repository: repository! )
+                service.prRequest(container: openPR, repository: repository!, state: "open")
+                service.prRequest(container: closedPR, repository: repository!, state: "closed")
+                
+                
+                
             }
         }
     }
     //For some reason, if i create this function inside an extension, the closure doesn't execute
-    func getOwner(name : String , handler : @escaping (Owner) -> Void  ){
-        service.getUser(username: name  , setUser: handler)
+    func getOwner(login : String , handler : @escaping (Owner) -> Void  ){
+        service.getUser(username: login  , setUser: handler)
     }
     
     

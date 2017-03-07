@@ -58,9 +58,20 @@ struct PullRequest: Decodable{
         self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json)
             ?? Date()
         self.body =   ("body" <~~ json)!
-        self.url = ("url" <~~ json)!
+        self.url = ("html_url" <~~ json)!
     }
+
+    
     
 }
 
+
+struct PullCount: Decodable{
+    let total_count : Int
+    
+    init?(json: JSON) {
+        self.total_count = ("total_count" <~~ json)!
+    }
+    
+}
 

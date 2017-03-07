@@ -14,7 +14,11 @@ enum GithubAPI{
     case repository(page: Int)
     case pullRequest(repository: Repository)
     case user(username : String)
+    case prIssues(repository: Repository, state: String)
 }
+
+
+
 extension GithubAPI: TargetType{
     /// The method used for parameter encoding.
     
@@ -25,18 +29,17 @@ extension GithubAPI: TargetType{
     /// The path to be appended to `baseURL` to form the full `URL`.
     public var path: String {
         switch self {
-        case .repository(let page): let a = "search/repositories?q=language:Swift&sort=stars&page=\(page)"
-            return a
-        case .pullRequest(let repository):
-            let a = "repos/\(repository.owner.login)/\(repository.name)/pulls"
-            return a
+        case .repository(let page): return "search/repositories?q=language:Swift&sort=stars&page=\(page)"
+        case .pullRequest(let repository):return "repos/\(repository.owner.login)/\(repository.name)/pulls"
+           
         case .user(let username) :  return "users/\(username)"
+        case .prIssues(let repository,  let state) : return "search/issues?q=repo:\(repository.owner.login)/\(repository.name)+is:pr+is:\(state)"
         }
         
     }
     
     var method: Moya.Method{
-        switch self{ case .repository, .pullRequest, .user : return .get}
+        switch self{ case .repository, .pullRequest, .user, .prIssues : return .get}
     }
     
     
@@ -48,6 +51,7 @@ extension GithubAPI: TargetType{
         case .repository : return nil
         case .pullRequest : return  nil
         case .user : return nil
+        case .prIssues : return nil
         }
     }
     

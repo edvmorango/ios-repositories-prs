@@ -19,6 +19,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wYZ-8b-06r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wUT-U2-ggb"/>
@@ -28,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="-621" y="56"/>
         </scene>
-        <!--Swift Repositories-->
+        <!--Repositories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ios_github_challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -182,7 +188,7 @@
                             <constraint firstItem="Zvd-Xc-OEq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TAf-md-MZS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Swift Repositories" id="3cj-qA-HlL"/>
+                    <navigationItem key="navigationItem" title="Repositories" id="3cj-qA-HlL"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -207,11 +213,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSA-T5-WCT">
+                                <rect key="frame" x="0.0" y="3" width="154" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eTL-7d-TG0"/>
+                                    <constraint firstAttribute="width" constant="154" id="tj4-VB-Z7o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.57647058819999997" blue="0.019607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-ak-J46">
+                                <rect key="frame" x="154" y="3" width="12" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vXa-MQ-cuH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhj-rM-Pye">
+                                <rect key="frame" x="167" y="3" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="2OV-um-FRO"/>
+                                    <constraint firstAttribute="height" constant="21" id="DhE-OD-yhK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-UK-977">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="KSX-Jt-3xl" customClass="PullRequestTableViewCell" customModule="ios_github_challenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="KSX-Jt-3xl" customClass="PullRequestTableViewCell" customModule="ios_github_challenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KSX-Jt-3xl" id="vxR-hc-yga">
@@ -295,17 +330,27 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="TvU-UK-977" secondAttribute="trailing" id="6wK-Cv-1aU"/>
-                            <constraint firstItem="TvU-UK-977" firstAttribute="leading" secondItem="1lN-fI-dle" secondAttribute="leading" id="DIg-Xo-U5i"/>
-                            <constraint firstItem="EML-o6-N7c" firstAttribute="top" secondItem="TvU-UK-977" secondAttribute="bottom" id="Fzk-wT-1es"/>
-                            <constraint firstItem="TvU-UK-977" firstAttribute="top" secondItem="1lN-fI-dle" secondAttribute="top" id="Qqk-3H-LJm"/>
+                            <constraint firstItem="rhj-rM-Pye" firstAttribute="top" secondItem="xHq-e0-kSO" secondAttribute="bottom" constant="3" id="0qm-wK-7A2"/>
+                            <constraint firstItem="rhj-rM-Pye" firstAttribute="leading" secondItem="4kE-ak-J46" secondAttribute="trailing" constant="1" id="4Bt-C2-4gu"/>
+                            <constraint firstItem="TvU-UK-977" firstAttribute="top" secondItem="xHq-e0-kSO" secondAttribute="bottom" constant="20" id="Ajh-mL-9hV"/>
+                            <constraint firstAttribute="trailing" secondItem="rhj-rM-Pye" secondAttribute="trailing" id="EFC-Ss-v0K"/>
+                            <constraint firstItem="gSA-T5-WCT" firstAttribute="top" secondItem="xHq-e0-kSO" secondAttribute="bottom" constant="3" id="Gq8-rg-bc1"/>
+                            <constraint firstItem="4kE-ak-J46" firstAttribute="top" secondItem="xHq-e0-kSO" secondAttribute="bottom" constant="3" id="IEV-Oc-FKY"/>
+                            <constraint firstItem="gSA-T5-WCT" firstAttribute="leading" secondItem="1lN-fI-dle" secondAttribute="leading" id="QaR-bN-2u8"/>
+                            <constraint firstAttribute="trailing" secondItem="TvU-UK-977" secondAttribute="trailing" id="d3e-eq-jul"/>
+                            <constraint firstItem="4kE-ak-J46" firstAttribute="leading" secondItem="gSA-T5-WCT" secondAttribute="trailing" id="eKT-0F-EM0"/>
+                            <constraint firstItem="TvU-UK-977" firstAttribute="top" secondItem="gSA-T5-WCT" secondAttribute="bottom" constant="-4" id="lyR-M9-lKN"/>
+                            <constraint firstItem="TvU-UK-977" firstAttribute="leading" secondItem="1lN-fI-dle" secondAttribute="leading" id="to6-Sv-t9N"/>
+                            <constraint firstItem="EML-o6-N7c" firstAttribute="top" secondItem="TvU-UK-977" secondAttribute="bottom" id="yG9-T1-vVj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Repository Name" id="KS4-7G-dYX">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="6gM-Ca-TkB"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Repository Name" id="KS4-7G-dYX"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="closedPR" destination="rhj-rM-Pye" id="aos-bo-iSd"/>
+                        <outlet property="navItem" destination="KS4-7G-dYX" id="VQJ-3v-dLi"/>
+                        <outlet property="openPR" destination="gSA-T5-WCT" id="qfe-DK-f90"/>
                         <outlet property="table" destination="TvU-UK-977" id="5RJ-xj-GlI"/>
                     </connections>
                 </viewController>

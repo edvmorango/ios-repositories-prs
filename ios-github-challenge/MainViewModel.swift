@@ -20,8 +20,8 @@ struct MainViewModel{
                 }
     }
     
-    func getOwner(name : String , handler : @escaping (Owner) -> Void  ){
-        service.getUser(username: name  , setUser: handler)
+    func getOwner(login : String , handler : @escaping (Owner) -> Void  ){
+        service.getUser(username: login  , setUser: handler)
     }
     
     
