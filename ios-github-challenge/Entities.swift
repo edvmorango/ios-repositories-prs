@@ -48,17 +48,19 @@ struct PullRequest: Decodable{
     let date : Date
     let body : String
     let url : String
-    init?(json: JSON) {
+   init?(json: JSON) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-dd-MM'T'HH:mm:ss'Z'"
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
-        
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         self.owner =  ("user" <~~ json)!
         self.title =  ("title" <~~ json)!
-        self.date =   Decoder.decode(dateForKey: "created_at", dateFormatter: dateFormatter)(json)
-            ?? Date()
         self.body =   ("body" <~~ json)!
         self.url = ("html_url" <~~ json)!
+    
+        let stringDate: String = ("created_at" <~~ json)!
+        let index = stringDate.index(stringDate.startIndex, offsetBy: 10)
+        let strDate = stringDate.substring(to: index )
+        self.date = dateFormatter.date(from: strDate)!
+    
     }
 
     

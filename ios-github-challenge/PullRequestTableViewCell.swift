@@ -14,6 +14,7 @@ class PullRequestTableViewCell : UITableViewCell{
 
     @IBOutlet weak var lbPRTitle: UILabel!
 
+    @IBOutlet weak var lbDate: UILabel!
     @IBOutlet weak var lbPRDescription: UILabel!
 
     @IBOutlet weak var ivOwner: UIImageView!

@@ -272,7 +272,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYq-sO-ee4">
-                                                    <rect key="frame" x="68" y="52" width="252" height="21"/>
+                                                    <rect key="frame" x="68" y="52" width="120" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.19339081650000001" green="0.45890837909999999" blue="0.66254603860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -293,8 +293,19 @@
                                                     <color key="textColor" red="0.67050164940000001" green="0.67055797579999998" blue="0.67458832260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTo-Zs-tVU">
+                                                    <rect key="frame" x="196" y="53" width="124" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="lAR-OP-odJ"/>
+                                                        <constraint firstAttribute="width" constant="124" id="uyy-XQ-R7a"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.67050164940000001" green="0.67055797579999998" blue="0.67458832260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gTo-Zs-tVU" secondAttribute="trailing" id="2Sp-2a-iUj"/>
                                                 <constraint firstItem="PJJ-Un-c9L" firstAttribute="top" secondItem="0Qd-zw-OUq" secondAttribute="bottom" id="4bl-9o-8gX"/>
                                                 <constraint firstItem="xDt-Qn-IUu" firstAttribute="leading" secondItem="vxR-hc-yga" secondAttribute="leading" constant="20" id="5M7-di-mjl"/>
                                                 <constraint firstItem="0Qd-zw-OUq" firstAttribute="leading" secondItem="vxR-hc-yga" secondAttribute="leading" constant="20" id="7nN-x8-2cN"/>
@@ -304,18 +315,21 @@
                                                 <constraint firstAttribute="trailing" secondItem="gLX-sC-IFj" secondAttribute="trailing" id="NHt-9g-fGY"/>
                                                 <constraint firstItem="xDt-Qn-IUu" firstAttribute="top" secondItem="PJJ-Un-c9L" secondAttribute="bottom" id="Nue-dr-31l"/>
                                                 <constraint firstItem="gLX-sC-IFj" firstAttribute="leading" secondItem="xDt-Qn-IUu" secondAttribute="trailing" constant="8" id="OnA-Kg-1U1"/>
+                                                <constraint firstAttribute="bottom" secondItem="gTo-Zs-tVU" secondAttribute="bottom" constant="25" id="QHq-Z7-QQm"/>
                                                 <constraint firstAttribute="trailing" secondItem="PJJ-Un-c9L" secondAttribute="trailing" constant="28" id="UWg-d8-JoX"/>
-                                                <constraint firstAttribute="trailing" secondItem="ZYq-sO-ee4" secondAttribute="trailing" id="Ug2-Cc-yYz"/>
                                                 <constraint firstAttribute="bottom" secondItem="xDt-Qn-IUu" secondAttribute="bottom" constant="7" id="gBn-sz-BvF"/>
                                                 <constraint firstItem="0Qd-zw-OUq" firstAttribute="top" secondItem="vxR-hc-yga" secondAttribute="top" constant="1" id="k9n-6V-isW"/>
                                                 <constraint firstAttribute="trailing" secondItem="0Qd-zw-OUq" secondAttribute="trailing" id="kJ7-xn-lgo"/>
                                                 <constraint firstAttribute="bottom" secondItem="gLX-sC-IFj" secondAttribute="bottom" constant="7" id="pSd-OS-bBv"/>
+                                                <constraint firstItem="gTo-Zs-tVU" firstAttribute="top" secondItem="PJJ-Un-c9L" secondAttribute="bottom" constant="1" id="pbp-iK-MDs"/>
                                                 <constraint firstItem="gLX-sC-IFj" firstAttribute="leading" secondItem="xDt-Qn-IUu" secondAttribute="trailing" constant="8" id="pdS-89-lZq"/>
+                                                <constraint firstItem="gTo-Zs-tVU" firstAttribute="leading" secondItem="ZYq-sO-ee4" secondAttribute="trailing" constant="8" id="q68-TF-mI4"/>
                                                 <constraint firstItem="ZYq-sO-ee4" firstAttribute="leading" secondItem="xDt-Qn-IUu" secondAttribute="trailing" constant="8" id="r9c-nw-h9h"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ivOwner" destination="xDt-Qn-IUu" id="t2B-Pp-AGP"/>
+                                            <outlet property="lbDate" destination="gTo-Zs-tVU" id="COZ-jS-QjW"/>
                                             <outlet property="lbLogin" destination="ZYq-sO-ee4" id="SpT-2C-PdN"/>
                                             <outlet property="lbPRDescription" destination="PJJ-Un-c9L" id="Dlc-Ui-zmb"/>
                                             <outlet property="lbPRTitle" destination="0Qd-zw-OUq" id="hau-tC-idn"/>

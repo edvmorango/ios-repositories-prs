@@ -57,10 +57,8 @@ class EntitiesTests : QuickSpec{
 
         "title": "add LICENSE Link",
         "body": "Part of License is `See LICENCE for details' in README.\r\n\r\nBut It's not uncomfortable and unkind\r\n\r\nI added LICENSE link.",
-        "created_at": "2017-03-01T16:30:15Z",
-//                      "2017-02-27T22:13:28Z",
-        
-         "url": "https://api.github.com/repos/vsouza/awesome-ios/pulls/1531",
+        "created_at": "2017-02-27T22:13:28Z",
+        "html_url": "https://api.github.com/repos/vsouza/awesome-ios/pulls/1531",
         "user": [
             "login": "helloyako",
             "avatar_url": "https://avatars1.githubusercontent.com/u/5343804?v=3",

@@ -37,6 +37,10 @@ class PullRequestViewController : UIViewController, UITableViewDelegate{
             c.lbPRDescription.text = e.body
             c.lbLogin.text = e.owner.login
             c.ivOwner.sd_setImage(with: URL(string: e.owner.photo)!)
+            
+            c.lbDate.text =  e.date.getFormmatedDate()
+           
+            
             self.viewModel.getOwner(login: e.owner.login , handler : { owner in
                 c.lbUserName.text = owner.name})
                                 }.addDisposableTo(bag)
