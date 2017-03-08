@@ -27,7 +27,6 @@
 		5BF5972E1E6A557600687BCD /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597211E6A557600687BCD /* Quick.framework */; };
 		5BF5972F1E6A557600687BCD /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597221E6A557600687BCD /* ReactiveSwift.framework */; };
 		5BF597301E6A557600687BCD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597231E6A557600687BCD /* Result.framework */; };
-		5BF597311E6A557600687BCD /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597241E6A557600687BCD /* Runes.framework */; };
 		5BF597321E6A557600687BCD /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597251E6A557600687BCD /* RxBlocking.framework */; };
 		5BF597331E6A557600687BCD /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597261E6A557600687BCD /* RxCocoa.framework */; };
 		5BF597341E6A557600687BCD /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF597271E6A557600687BCD /* RxMoya.framework */; };
@@ -137,7 +136,6 @@
 				5BF5972E1E6A557600687BCD /* Quick.framework in Frameworks */,
 				5BF5972F1E6A557600687BCD /* ReactiveSwift.framework in Frameworks */,
 				5BF597301E6A557600687BCD /* Result.framework in Frameworks */,
-				5BF597311E6A557600687BCD /* Runes.framework in Frameworks */,
 				5BF597461E6A696000687BCD /* Gloss.framework in Frameworks */,
 				5BF597321E6A557600687BCD /* RxBlocking.framework in Frameworks */,
 				5BF597331E6A557600687BCD /* RxCocoa.framework in Frameworks */,
@@ -449,7 +447,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
